@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Noto+Sans+JP:wght@400;700&display=swap');
+
+/* ==============================================================
+# 基本設定
+=========================================================== */
+$color-main: #3f5185;
+$color-accent: #e81919;
+$color-text: #333333;
+
+$layout-width-inner: 1200px;
+
+$font-en: 'Lato', sans-serif;
+$font-ja: 'Noto Sans JP', sans-serif;
+
+/* ==============================================================
+# ブレークポイント
+=========================================================== */
+$breakpoints: (
+	"sp": "(max-width: 767px)",
+	"tab": "(min-width: 768px) and (max-width: #{$layout-width-inner})",
+	"pc": "(min-width: #{$layout-width-inner})",
+);
+/* ==============================================================
+# メディアクエリ
+=========================================================== */
+@mixin mq ($breakpoint: sp) {
+	@media #{map-get($breakpoints, $breakpoint)} {
+		@content;
+	}
+}
+
+/* ==============================================================
+# css初期化
+=========================================================== */
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+html,
+body {
+	padding: 0;
+	margin: 0;
+}

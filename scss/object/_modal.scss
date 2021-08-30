@@ -1,0 +1,117 @@
+.modal-contact {
+  position: fixed;
+  z-index: 501;
+  width: 900px;
+  max-width: calc(100% - 24px * 2);
+  height: 652px;
+  max-height: calc(100% - 24px * 2);
+  background: #fff;
+  box-shadow: 0 0 3px rgba(#000, 0.16);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 60px;
+  color: #707070;
+  display: none;
+
+  // スマホ
+  @include mq('sp') {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
+
+.modal-contact__head {
+  font-weight: 700;
+  font-size: 24px;
+  padding-bottom: 24px;
+  position: relative;
+  text-align: center;
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 100px;
+    height: 2px;
+    background: $color-main;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+  }
+}
+
+.modal-contact__content {
+  margin-top: 40px;
+  height: calc(100% - 84px - 108px);
+  overflow: auto;
+
+  > :first-child {
+    margin-top: 0;
+  }
+}
+
+.modal-contact__sub-head {
+  font-size: 20px;
+  font-weight: 700;
+  padding-left: 20px;
+  position: relative;
+  margin-top: 40px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 4px;
+    height: 20px;
+    background: $color-main;
+  }
+}
+
+.modal-contact__text {
+  margin-top: 16px;
+  line-height: (24 / 16);
+  padding-left: 20px;
+}
+
+.modal-contact__button {
+  margin-top: 60px;
+  text-align: center;
+  a {
+    display: inline-block;
+    width: 176px;
+    padding: 14px;
+    text-align: center;
+    color: #fff;
+    background: $color-main;
+    font-weight: 700;
+    border-radius: 8px;
+    box-shadow: 0 3px 6px rgba(#000, 0.16);
+  }
+}
+
+.modal-contact__icon {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  right: -20px;
+  top: -20px;
+  a {
+
+  }
+  img {
+    width: 40px;
+  }
+}
+
+.modal-contact-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(#000, 0.3);
+  z-index: 500;
+  display: none;
+}

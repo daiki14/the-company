@@ -1,0 +1,187 @@
+.footer {
+  background: linear-gradient(to bottom, #666666, #333333);
+  padding: 60px 0 24px; 
+  color: #fff;
+
+  // スマホ
+  @include mq('sp') {
+    padding-top: 30px;
+    padding-bottom: 14px;
+  }
+}
+
+.footer__inner {
+
+}
+
+.footer__content {
+  display: flex;
+
+  // スマホ
+  @include mq('sp') {
+    display: block;
+  }
+}
+
+.footer__left {
+  width: 36%;
+
+  // スマホ
+  @include mq('sp') {
+    width:100%;
+  }
+}
+
+.footer__logo {
+
+  img {
+    width: 205px;
+  }
+}
+
+.footer__address,
+.footer__tel {
+  font-size: 14px;
+}
+
+.footer__address {
+  margin-top: 26px;
+
+  // スマホ
+  @include mq('sp') {
+    margin-top: 13px;
+  }
+}
+
+.footer__tel {
+  margin-top: 10px;
+
+  // スマホ
+  @include mq('sp') {
+    margin-top: 6px;
+  }
+}
+
+.footer__center {
+  width: 48%;
+
+  // スマホ
+  @include mq('sp') {
+    width:100%;
+    margin-top: 24px;
+  }
+}
+
+.footer__nav {
+  display: flex;
+  font-family: $font-en;
+
+  // スマホ
+  @include mq('sp') {
+    margin-top: 24px;
+  }
+
+  li {
+    &:not(:first-child) {
+      margin-left: 40px;
+
+      // スマホ
+      @include mq('sp') {
+        margin-left: 20px;
+      }
+    }
+
+    a {
+      transition: all .3s ease 0s;
+
+      &:hover {
+        opacity: 0.7;
+      }
+    }
+  }
+}
+
+.footer__right {
+  width: 16%;
+
+  // スマホ
+  @include mq('sp') {
+    width:100%;
+    margin-top: 24px;
+  }
+}
+
+.footer__sns {
+  display: flex;
+  justify-content: flex-end;
+
+  // スマホ
+  @include mq('sp') {
+    justify-content: center;
+  }
+  li {
+    &:not(:first-child) {
+      margin-left: 16px;
+    }
+    a {
+      transition: all .3s ease 0s;
+
+      &:hover {
+        opacity: 0.7;
+      }
+    }
+
+    img {
+      width: 30px;
+    }
+  }
+}
+
+.footer__copy {
+  text-align: center;
+  font-size: 14px;
+  margin-top: 46px;
+  font-family: $font-en;
+
+  // スマホ
+  @include mq('sp') {
+    margin-top: 22px;
+  }
+}
+
+.to-top {
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease 0s;
+
+  // スマホ
+  @include mq('sp') {
+    right: 12px;
+    bottom: 12px;
+  }
+
+  &.is-show {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  a {
+    transition: all .3s ease 0s;
+
+    &:hover {
+      opacity: 0.7;
+    }
+
+    img {
+      width: 60px;
+
+      // スマホ
+      @include mq('sp') {
+        width: 40px;
+      }
+    }
+  }
+}

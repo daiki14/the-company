@@ -1,0 +1,90 @@
+.card {
+  background: #efefef;
+  // padding: 88px 0 120px;
+
+  // スマホ
+  @include mq('sp') {
+    margin-top: 0;
+  }
+
+}
+
+.card__inner {
+
+}
+
+.card__head {
+  
+}
+
+.card__items {
+  margin-top: 80px;
+  display: flex;
+  flex-wrap: wrap;
+
+  // スマホ
+  @include mq('sp') {
+    margin-top: 42px;
+  }
+}
+
+.card__item {
+  width: calc(33.3% - 24px * 2 / 3);
+  background: #fff;
+  padding: 16px;
+  border-radius: 4px;
+
+  // PCのみ
+  @include mq('pc') {
+    &:not(:nth-child(3n + 1)) {
+      margin-left: 24px;
+    }
+  
+    &:nth-child(n + 4) {
+      margin-top: 24px;
+    }
+  }
+
+  // タブレット
+  @include mq('tab') {
+    width: calc(50% - 24px * 1 / 2);
+
+    &:not(:nth-child(2n + 1)) {
+      margin-left: 24px;
+    }
+
+    &:nth-child(n + 3) {
+      margin-top: 24px;
+    }
+  }
+
+  // スマホ
+  @include mq('sp') {
+    width: 100%;
+    margin-left: 0;
+
+    &:nth-child(n + 2) {
+      margin-top: 24px;
+    }
+  }
+}
+
+.card__img {
+  img {
+    
+  }
+}
+
+.card__title {
+  font-size: 20px;
+  font-weight: 700;
+  color: #6F7579;
+  margin-top: 4px;
+}
+
+.card__text {
+  font-weight: 700;
+  color: #6F7579;
+  line-height: (24 / 16);
+  margin-top: 5px;
+}
